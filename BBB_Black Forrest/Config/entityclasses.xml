@@ -1,0 +1,190 @@
+<configs>
+
+
+<setattribute xpath="/entity_classes/entity_class[@name='EntityLootContainerRegular' or @name='EntityLootContainerNurse' or @name='EntityLootContainerLab' or @name='EntityLootContainerUtility' or @name='EntityLootContainerSoldier' or @name='EntityLootContainerThug' or @name='EntityLootContainerStrong' or @name='EntityLootContainerBoss']/property[@name='TimeStayAfterDeath']" name="value" >2400</setattribute>
+
+
+knochen bei animals finden
+<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+<insertAfter xpath="/entity_classes/entity_class[@name='animalBearSmall']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+<insertAfter xpath="/entity_classes/entity_class[@name='animalCoyote']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+<insertAfter xpath="/entity_classes/entity_class[@name='animalMountainLion']/drop[@event='Harvest']">
+<drop event="Harvest" name="meleeWpnClubT0BoneClub" tag="butcherHarvest" prob=".1" count="1"/>
+</insertAfter>
+
+
+<append xpath="/entity_classes">
+
+
+Kürbis
+<entity_class name="KurbiszombieBBB" extends="zombieSteve">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KurbisZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im kopf
+<entity_class name="KMesserzombieBBB" extends="zombieArlene">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KMesserZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im rücken
+<entity_class name="RMesserzombieBBB" extends="zombieSpider">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB"/>
+		<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB_02"/>-->
+	</effect_group>
+</entity_class>
+
+axtim rücken
+<entity_class name="RAxtzombieBBB" extends="zombieLumberjack">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RAxtZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+Lampenman
+<entity_class name="LampenzombieBBB" extends="zombieMaleHazmatFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LampenZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+alki
+<entity_class name="WineZombiBBB" extends="zombieMoe">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WineZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+
+
+Feral
+
+KürbiszombieFeral
+<entity_class name="KurbiszombieFeralBBB" extends="zombieSteveFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KurbisZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im kopf
+<entity_class name="KMesserzombieFeralBBB" extends="zombieArleneFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KMesserZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im rücken
+<entity_class name="RMesserzombieFeralBBB" extends="zombieSpiderFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB"/>
+		<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB_02"/>-->
+	</effect_group>
+</entity_class>
+
+axtim rücken
+<entity_class name="RAxtzombieFeralBBB" extends="zombieLumberjackFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RAxtZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+Lampenman
+<entity_class name="LampenzombieFeralBBB" extends="zombieMaleHazmatFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LampenZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+alki
+<entity_class name="WineZombiFeralBBB" extends="zombieMoeFeral">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WineZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+
+
+
+Radiated
+
+KürbiszombieRadiated
+<entity_class name="KurbiszombieRadiatedBBB" extends="zombieSteveRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KurbisZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im kopf
+<entity_class name="KMesserzombieRadiatedBBB" extends="zombieArleneRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="KMesserZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+messer im rücken
+<entity_class name="RMesserzombieRadiatedBBB" extends="zombieSpiderRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB"/>
+		<!--<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RMesserZombiBBB_02"/>-->
+	</effect_group>
+</entity_class>
+
+axtim rücken
+<entity_class name="RAxtzombieRadiatedBBB" extends="zombieLumberjackRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="RAxtZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+Lampenman
+<entity_class name="LampenzombieRadiatedBBB" extends="zombieMaleHazmatRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="LampenZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+alki
+<entity_class name="WineZombiRadiatedBBB" extends="zombieMoeRadiated">
+	<effect_group name="Base Effects">
+		<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="WineZombiBBB"/>
+	</effect_group>
+</entity_class>
+
+HasiBBB		
+<entity_class name="animalRabbitBBB" extends="animalRabbit" >
+  	<property name="SizeScale" value="2.4"/>
+</entity_class>
+
+		<!-- *** ZOMBIE_FAT_COP_Small -->
+<entity_class name="zombieFatCopSmallBBB" extends="zombieFatCop" >
+  	<property name="SizeScale" value=".7"/>
+</entity_class>
+
+		<!-- *** ZOMBIE_FAT_COP_Big -->
+<entity_class name="zombieFatCopBigBBB" extends="zombieFatCop" >
+  	<property name="SizeScale" value="1.3"/>
+</entity_class>
+
+</append>
+
+
+
+
+
+</configs>

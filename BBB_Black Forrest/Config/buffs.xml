@@ -1,0 +1,71 @@
+<configs>
+
+<append xpath="/buffs">
+ 
+	<buff name="KurbisZombiBBB" hidden="true">
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" target="self" particle="p_torch_wall" local_offset="0,0.2,-0.1" local_rotation="0,0,0" parent_transform="Head"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" target="self" particle="p_torch_wall" local_offset="0,0.2,-0.1" local_rotation="0,0,0" parent_transform="Head"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Plants/pumpkinJackoLanternPrefab.prefab" local_offset="0,0.45,0" local_rotation="0,0,0" parent_transform="Head"/>			
+		</effect_group>
+		<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Industrial/coneConstructionPrefab.prefab" local_offset="0,0.2,0" local_rotation="0,0,0" parent_transform="Head"/>	
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="LeftHand"/>	
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_torch_wall" local_offset="0,0,0" local_rotation="0,0,0" parent_transform="RightHand"/>	
+		</effect_group>
+	</buff>
+	
+arlene
+	<buff name="KMesserZombiBBB" hidden="true">
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Melee/Knives/hunting_knifePrefab.prefab" local_offset="-0.16,0.175,0.155" local_rotation="112,129,0" parent_transform="Head"/>	
+		</effect_group>
+	</buff>
+
+holzfäller
+	<buff name="RAxtZombiBBB" hidden="true">
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Melee/Axe/fireaxe_ironPrefab.prefab" local_offset="-0.15,0.2,0.3" local_rotation="200,0,330" parent_transform="RightShoulder"/>				
+		</effect_group>
+	</buff>
+
+spider
+	<buff name="RMesserZombiBBB" hidden="true">
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Melee/Knives/machetePrefab.prefab" local_offset="-0.06,-0.01,-0.3" local_rotation="90,25,0" parent_transform="LeftShoulder"/>	
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Melee/Knives/boneShivPrefab.prefab" local_offset="0.05,0.21,-0.25" local_rotation="90,340,0" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Melee/Knives/hunting_knifePrefab.prefab" local_offset="0.08,0.11,-0.4" local_rotation="75,350,0" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Other/Items/Weapons/Ranged/Bows/Arrows/arrow_stonePrefab.prefab" local_offset="0.7,-0.05,-0.25" local_rotation="0,290,0" parent_transform="RightUpLeg"/>		
+		</effect_group>
+	</buff>	
+
+Lampenman
+	<buff name="LampenZombiBBB" hidden="true">
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Electrical/lightIndustrialMountedWallRedPrefab.prefab" local_offset="0,0,0.55" local_rotation="5,0,0" parent_transform="Head"/>	
+		</effect_group>
+	</buff>
+	
+WineZombiBBB	
+	<buff name="WineZombiBBB" hidden="true">
+		<duration value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="@:Entities/Commercial/wineBottlePrefab.prefab" local_offset="0.15,0.05,0.07" local_rotation="270,0,0" parent_transform="RightHand"/>	
+		</effect_group>
+	</buff>
+
+</append>
+
+</configs>
